@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, rgb(216, 154, 240), rgb(189, 127, 240));
+    overflow: hidden;
+}
+
+.holder {
+    position: absolute;
+    top: -5px;
+    height: 500px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerC { /*traço central em branco*/
+    position: absolute;
+    height: 500px;
+    width: 10px;
+    background:rgba(255,255,255,0);
+    display: flex;
+    justify-content: center;
+}
+
+.containerC .stringC { /*traço preto dentro do branco*/
+    position: absolute;
+    height: 400px;
+    width: 1px;
+    background: black;
+}
+
+.containerC .ballC { /*bola central*/
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(129,76,76,0.11), rgba(0,0,0,0.671), rgba(0,0,0,0.89));
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.containerC .ballC::after { /*ligação entre o fio e a bola*/
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 9px;
+    background: black;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    top: -3px;
+}
+
+/*fio e bola esquerda*/
+
+.container1 { /*traço central em branco*/
+    position: absolute;
+    height: 500px;
+    width: 10px;
+    background:rgba(255,255,255,0);
+    transform: rotate(12.5deg);
+    transform-origin: top left;
+    display: flex;
+    justify-content: center;
+    animation: swing1 4s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes swing1 {
+    0% {
+        transform: rotate(12.5deg);
+    }
+    30%, 60% {
+        transform: rotate(50deg);
+    }
+    60%, 100% {
+        transform: rotate(12.5deg);
+    }
+}
+
+
+.container1 .string1 { /*traço preto dentro do branco*/
+    position: absolute;
+    height: 400px;
+    width: 1px;
+    background: black;
+}
+
+.container1 .ball1 { /*bola central*/
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(129,76,76,0.11), rgba(0,0,0,0.671), rgba(0,0,0,0.89));
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.container1 .ball1::after { /*ligação entre o fio e a bola*/
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 9px;
+    background: black;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    top: -3px;
+}
+
+/*fio e bola direita*/
+
+
+.container2 { /*traço central em branco*/
+    position: absolute;
+    height: 500px;
+    width: 10px;
+    background:rgba(255,255,255,0);
+    transform: rotate(-50deg);
+    transform-origin: top left;
+    display: flex;
+    justify-content: center;
+    animation: swing2 4s ease-in-out infinite;
+}
+
+@keyframes swing2 {
+    0% {
+        transform: rotate(-50deg);
+    }
+    30%, 78% {
+        transform: rotate(-12.8deg);
+    }
+    100% {
+        transform: rotate(-50deg);
+    }
+}
+
+.container2 .string2 { /*traço preto dentro do branco*/
+    position: absolute;
+    height: 400px;
+    width: 1px;
+    background: black;
+}
+
+.container2 .ball2 { /*bola central*/
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(129,76,76,0.11), rgba(0,0,0,0.671), rgba(0,0,0,0.89));
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.container2 .ball2::after { /*ligação entre o fio e a bola*/
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 9px;
+    background: black;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    top: -3px;
+}
